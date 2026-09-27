@@ -44,7 +44,7 @@ function setRunning(next) {
   } else {
     clearInterval(timer); timer = null;
     timerStatus.textContent = 'Break';
-    startButton.innerHTML = '<span class="play-icon">▶</span> Start studying';
+    startButton.innerHTML = '<span class="play-icon">▶</span> Start Studying';
   }
 }
 startButton.addEventListener('click', () => setRunning(!running));
