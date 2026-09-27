@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#10231f" />
+    <title>Study Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <nav class="topbar">
+        <a class="brand" href="#top">Study-Tracker</a>
+        <a class="calendar-link" href="#calendar">Calendar <span>↓</span></a>
+      </nav>
+
+      <section id="top" class="timer-section" aria-labelledby="timer-title">
+        <div class="timer-layout">
+          <div class="timer-card">
+            <p class="card-label">TODAY'S STUDY HOURS</p>
+            <div class="time-display" id="timeDisplay" aria-live="polite">00:00:00</div>
+            <p class="timer-status" id="timerStatus">Break</p>
+            <button class="start-button" id="startButton" type="button"><span class="play-icon">▶</span> Start studying</button>
+            <button class="reset-button" id="resetButton" type="button">Reset session</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="calendar" class="calendar-section" aria-labelledby="calendar-title">
+        <div class="calendar-heading">
+          <div>
+            <h2 id="calendar-title">Study <em>calendar.</em></h2>
+          </div>
+          <div class="month-controls">
+            <button id="prevMonth" type="button" aria-label="Previous month">←</button>
+            <p id="monthLabel"></p>
+            <button id="nextMonth" type="button" aria-label="Next month">→</button>
+          </div>
+        </div>
+
+        <div class="calendar-card">
+          <div class="weekdays" aria-hidden="true">
+            <span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span>
+          </div>
+          <div id="calendarGrid" class="calendar-grid"></div>
+        </div>
+      </section>
+    </main>
+    <footer id="dailyQuote"></footer>
+    <script src="app.js"></script>
+  </body>
+</html>
